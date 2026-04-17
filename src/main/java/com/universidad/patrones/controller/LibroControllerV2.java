@@ -9,6 +9,7 @@ import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import java.util.List;
+import java.util.NoSuchElementException;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -40,10 +41,9 @@ public class LibroControllerV2 {
     @GetMapping("/{id}")
     @Operation(summary = "Obtener libro por ID")
     public ResponseEntity<LibroResponseDTO> obtener(@PathVariable Long id) {
-        return service.findById(id)
-            .map(mapper::toResponse)
-            .map(ResponseEntity::ok)
-            .orElse(ResponseEntity.notFound().build());
+        Libro libro = service.findById(id)
+            .orElseThrow(() -> new NoSuchElementException("Libro no encontrado: " + id));
+        return ResponseEntity.ok(mapper.toResponse(libro));
     }
 
     @PostMapping

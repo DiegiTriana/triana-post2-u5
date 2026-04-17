@@ -29,3 +29,17 @@ mvn clean spring-boot:run
 ## Documentacion
 - Swagger UI: `http://localhost:8080/swagger-ui.html`
 - OpenAPI JSON: `http://localhost:8080/api-docs`
+
+## Evidencias de Verificacion (2026-04-17 16:26:56)
+
+| Checkpoint | Estado | Evidencia |
+|---|---|---|
+| Compila sin errores (mvn compile) | PASS | mvn -q -DskipTests compile |
+| Aplicacion inicia en puerto de prueba | PASS | http://localhost:18502 |
+| POST valido retorna 201 | PASS | status=201 |
+| POST ISBN duplicado retorna 400 | PASS | status=400 |
+| GET inexistente retorna 404 con error | PASS | status=404 |
+| POST invalido (titulo vacio) retorna 400 | PASS | status=400 |
+| Swagger UI accesible | PASS | status=200 |
+
+
