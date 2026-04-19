@@ -40,7 +40,7 @@ mvn clean spring-boot:run
 | Checkpoint | Estado | Evidencia |
 |---|---|---|
 | Compila sin errores (mvn compile) | PASS | mvn -q -DskipTests compile |
-| Aplicacion inicia en puerto de prueba | PASS | http://localhost:18502 |
+| Aplicacion inicia en puerto de prueba | PASS | http://localhost:8080/h2-console |
 | POST valido retorna 201 | PASS | status=201 |
 | POST ISBN duplicado retorna 400 | PASS | status=400 |
 | GET inexistente retorna 404 con error | PASS | status=404 |
