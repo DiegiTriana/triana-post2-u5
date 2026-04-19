@@ -32,7 +32,7 @@ mvn clean spring-boot:run
 
 ## Evidencias de Verificacion 
 
-![console](Captura de pantalla prueba 2.png)
+![console](captura1.png)
 
 | Checkpoint | Estado | Evidencia |
 |---|---|---|
