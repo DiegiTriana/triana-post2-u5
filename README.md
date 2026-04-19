@@ -30,7 +30,7 @@ mvn clean spring-boot:run
 - Swagger UI: `http://localhost:8080/swagger-ui.html`
 - OpenAPI JSON: `http://localhost:8080/api-docs`
 
-## Evidencias de Verificacion (2026-04-17 16:26:56)
+## Evidencias de Verificacion 
 
 | Checkpoint | Estado | Evidencia |
 |---|---|---|
