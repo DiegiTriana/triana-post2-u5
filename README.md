@@ -32,6 +32,8 @@ mvn clean spring-boot:run
 
 ## Evidencias de Verificacion 
 
+![console](Captura de pantalla prueba 2.png)
+
 | Checkpoint | Estado | Evidencia |
 |---|---|---|
 | Compila sin errores (mvn compile) | PASS | mvn -q -DskipTests compile |
